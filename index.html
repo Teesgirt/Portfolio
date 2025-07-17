@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shobhit Kumar - Portfolio</title>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Tailwind & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+  <!-- Animation & Effects -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.2/tsparticles.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+.menu-open {
+  max-height: 500px;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.menu-close {
+  max-height: 0;
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+#mobile-menu {
+  transform-origin: top;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d1128;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .bg-custom-dark {
+      background-color: #0d1128;
+    }
+
+    #scroll-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: #ef4444;
+      width: 0%;
+      z-index: 50;
+    }
+
+     .menu-open {
+    max-height: 500px;
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  .menu-close {
+    max-height: 0;
+    opacity: 0;
+    transform: scaleY(0);
+  }
+
+  #mobile-menu {
+    transform-origin: top;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+  }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    
+  </style>
+</head>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<body class="bg-custom-dark relative">
+ <div id="scroll-bar"></div>
+
+  <!-- Particle Background -->
+  <div id="tsparticles" class="absolute top-0 left-0 w-full h-full -z-10"></div>
+
+
+<!-- Container -->
+<div class="container mx-auto px-6 py-4 relative z-10">
+  <!-- Header -->
+  <!-- Header -->
+<header class="sticky top-0 z-50 flex justify-between items-center py-4 px-6 bg-custom-dark backdrop-blur-md bg-opacity-90 shadow-md" data-aos="fade-down">
+  <div class="text-3xl font-bold text-white">Portfolio</div>
+
+  <!-- Hamburger Icon -->
+  <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Desktop Menu -->
+  <nav class="hidden md:flex items-center space-x-8">
+    <a class="text-white hover:text-red-500 transition" href="#about">About</a>
+    <a class="text-white hover:text-red-500 transition" href="#skills">Skills</a>
+    <a class="text-white hover:text-red-500 transition" href="#portfolio">Portfolio</a>
+    <a class="text-white hover:text-red-500 transition" href="#contact">Contact</a>
+    <a class="text-white hover:text-red-500 transition" href="#">Home</a>
+  </nav>
+</header>
+
+<!-- Mobile Dropdown Menu (below header) -->
+<nav id="mobile-menu" class="md:hidden hidden flex flex-col bg-custom-dark px-6 pt-4 pb-6 space-y-4 shadow-md rounded-b-lg transition-all duration-300 ease-in-out sticky top-[64px] z-40">
+
+  <a class="text-white hover:text-red-500 transition" href="#about">About</a>
+  <a class="text-white hover:text-red-500 transition" href="#skills">Skills</a>
+  <a class="text-white hover:text-red-500 transition" href="#portfolio">Portfolio</a>
+  <a class="text-white hover:text-red-500 transition" href="#contact">Contact</a>
+  <a class="text-white hover:text-red-500 transition" href="#">Home</a>
+</nav>
+
+
+
+  <!-- Hero Section -->
+  <main class="flex flex-col-reverse md:flex-row items-center justify-between min-h-screen relative">
+    <div class="absolute top-24 right-10 h-24 w-24 bg-red-500 rounded-full opacity-20"></div>
+    <div class="absolute bottom-10 left-10 h-32 w-32 bg-red-500 rounded-full opacity-10"></div>
+
+    <div class="w-full md:w-1/2 px-6 md:px-12 text-center md:text-left" data-aos="fade-right">
+      <p class="text-2xl text-gray-400 mb-2">Hello, I am</p>
+      <h1 class="text-6xl lg:text-8xl font-bold leading-tight mb-4">Shobhit<br />Kumar</h1>
+      <p class="text-2xl text-gray-400 mb-8">A <span id="type"></span></p>
+
+      <div class="flex justify-center md:justify-start items-center mb-10">
+        <span class="mr-4 text-gray-400 text-lg">Find Me on</span>
+        <div class="flex space-x-4">
+          <a class="text-white bg-gray-800 p-3 rounded-full hover:scale-110 hover:bg-red-500 transition duration-300" href="https://www.linkedin.com/in/shobhit-k-b1b037204/"><i class="fab fa-linkedin-in text-2xl"></i></a>
+          <a class="text-white bg-gray-800 p-3 rounded-full hover:scale-110 hover:bg-red-500 transition duration-300" href="https://github.com/Teesgirt"><i class="fab fa-github text-2xl"></i></a>
+          <a class="text-white bg-gray-800 p-3 rounded-full hover:scale-110 hover:bg-red-500 transition duration-300" href="mailto:skumarmmr225@gmail.com"><i class="fas fa-envelope text-2xl"></i></a>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+        <a href="#hire" class="bg-red-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-red-600 transition duration-300">Hire Me</a>
+        <a href="Shobhit_Kumar_Resume.pdf" class="border border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition duration-300">Download Resume</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ABOUT ME Section -->
+  <section id="about" class="py-20">
+    <h2 class="text-4xl font-bold text-center mb-10">ABOUT ME</h2>
+    <div class="text-center text-lg mb-10">I am a <span class="text-red-500 font-semibold" id="type2"></span></div>
+
+    <div class="space-y-10 max-w-4xl mx-auto text-gray-400 text-base leading-relaxed">
+      <div>
+        <h3 class="text-white text-2xl font-semibold mb-2">Who I Am</h3>
+        <p>Hi, I’m <strong class="text-white">Shobhit Kumar</strong> — a passionate Android Developer who creates clean, practical mobile apps using <strong class="text-white">Java</strong>, <strong class="text-white">Kotlin</strong>, <strong class="text-white">SQLite</strong>, and more.</p>
+      </div>
+      <div>
+        <h3 class="text-white text-2xl font-semibold mb-2">Projects</h3>
+        <p>Apps like <strong class="text-white">Unit Converter</strong> and <strong class="text-white">Weight Loss Tracker</strong> are live on Google Play. These projects polished my skills from design to deployment.</p>
+      </div>
+      <div>
+        <h3 class="text-white text-2xl font-semibold mb-2">Internship</h3>
+        <p>I interned at <strong class="text-white">Datawaves Software Solutions LLP</strong>, gaining real-world experience in UI/UX, backend, and performance optimization.</p>
+      </div>
+      <div>
+        <h3 class="text-white text-2xl font-semibold mb-2">Soft Skills</h3>
+        <p>I value clean design, logical thinking, and continual improvement. My strengths include adaptability, creativity, and a strong focus on user experience.</p>
+      </div>
+
+       <!-- Highlights -->
+      <section class="mb-16">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Highlights</h2>
+        <ul class="list-disc pl-6 text-gray-400 space-y-2">
+          <li>🚀 Published 2 apps on Play Store</li>
+          <li>💼 Internship at Datawaves Software</li>
+          <li>📱 Specialized in Android development with Java/Kotlin</li>
+          <li>🎯 Strong focus on performance & UX</li>
+        </ul>
+      </section>
+      
+    </div>
+  </section>
+
+   
+  <!-- SKILLS Section -->
+  <section id="skills" class="py-20">
+    <h2 class="text-4xl font-bold text-center mb-10">Skills</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl mx-auto">
+      <div><div class="flex justify-between"><span>Java</span><span>90%</span></div><div class="w-full bg-gray-700 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div></div></div>
+      <div><div class="flex justify-between"><span>Kotlin</span><span>80%</span></div><div class="w-full bg-gray-700 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div></div></div>
+      <div><div class="flex justify-between"><span>Android Studio</span><span>85%</span></div><div class="w-full bg-gray-700 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div></div></div>
+      <div><div class="flex justify-between"><span>XML & UI Design</span><span>75%</span></div><div class="w-full bg-gray-700 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div></div></div>
+      <div><div class="flex justify-between"><span>SQLite</span><span>80%</span></div><div class="w-full bg-gray-700 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div></div></div>
+      <div><div class="flex justify-between"><span>Firebase</span><span>70%</span></div><div class="w-full bg-gray-700 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div></div></div>
+      <div><div class="flex justify-between"><span>REST APIs</span><span>75%</span></div><div class="w-full bg-gray-700 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div></div></div>
+      <div><div class="flex justify-between"><span>Material Design</span><span>85%</span></div><div class="w-full bg-gray-700 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div></div></div>
+    </div>
+  </section>
+</div>
+
+ <!-- Portfolio Section -->
+  <main id="portfolio" class="container mx-auto px-6 py-14 relative z-10">
+    <h2 class="text-4xl font-bold mb-12 text-center text-white relative">
+      <span class="inline-block border-b-4 border-red-500 pb-1">My Work</span>
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Project Cards -->
+      <div class="bg-white text-black p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300" data-aos="fade-up">
+        <div class="flex items-center space-x-3 mb-4">
+          <i class="fas fa-ruler-combined text-red-500 text-2xl"></i>
+          <h3 class="text-xl font-semibold">Unit Converter App</h3>
+        </div>
+        <p class="text-gray-700 mb-4">
+          Android app for converting units (length, weight, etc.) built using Java, XML, and SQLite. Published on Play Store with intuitive UI and offline support.
+        </p>
+        <a href="https://play.google.com/store/apps/details?id=com.despdev.weight_loss_calculator" target="_blank" class="text-blue-600 hover:underline">View on Play Store</a>
+      </div>
+
+      <div class="bg-white text-black p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center space-x-3 mb-4">
+          <i class="fas fa-weight text-green-600 text-2xl"></i>
+          <h3 class="text-xl font-semibold">Weight Loss Tracker</h3>
+        </div>
+        <p class="text-gray-700">
+          A mobile app to monitor weight changes, BMI, and body fat. Uses Material Design, SQLite, and custom UI elements. Helps users visualize fitness progress.
+        </p>
+      </div>
+
+      <div class="bg-white text-black p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center space-x-3 mb-4">
+          <i class="fas fa-question-circle text-purple-600 text-2xl"></i>
+          <h3 class="text-xl font-semibold">Quiz Application</h3>
+        </div>
+        <p class="text-gray-700">
+          Interactive quiz app used by 500+ students. Features leaderboard, analytics, and REST API integration with Retrofit. Increased engagement by 60%.
+        </p>
+      </div>
+
+      <div class="bg-white text-black p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex items-center space-x-3 mb-4">
+          <i class="fas fa-shopping-cart text-yellow-500 text-2xl"></i>
+          <h3 class="text-xl font-semibold">Shopping Cart Theft Detection</h3>
+        </div>
+        <p class="text-gray-700">
+          An IoT-based system using IR sensors and NodeMCU to detect theft at checkout. Improved accuracy with adaptive thresholding. Built with Arduino IDE.
+        </p>
+      </div>
+    </div>
+<section id="hire" class="py-20 px-6 relative z-10"></section>
+<main class="container mx-auto px-4 md:px-8 py-12">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-3xl md:text-4xl font-bold text-center mb-10">Why You Should Hire Me</h1>
+
+      <!-- Professional Summary -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Professional Summary</h2>
+        <p class="text-gray-300 leading-relaxed">
+          I’m <strong class="text-white">Shobhit Kumar</strong>, a passionate Android Developer with hands-on experience in building real-world applications. I specialize in Java, Kotlin, and Android Studio with a strong focus on clean code, modern UI/UX, and scalable architecture. My apps are already available on the <a class="text-red-400 underline" href="https://play.google.com/store/apps/details?id=com.despdev.weight_loss_calculator" target="_blank">Google Play Store</a>.
+        </p>
+      </section>
+
+      <!-- Experience -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Internship Experience</h2>
+        <p class="text-gray-300 leading-relaxed">
+          At <strong class="text-white">Datawaves Software Solutions LLP</strong>, I created and published Android apps like <strong>Unit Converter</strong> and <strong>Weight Loss Tracker</strong>. I worked in an Agile, remote environment with regular standups and code reviews, and used SQLite, Material Design, and REST APIs for full-stack mobile development.
+        </p>
+      </section>
+
+      <!-- Skills -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Technical Skills</h2>
+        <ul class="grid grid-cols-2 gap-x-6 gap-y-2 text-gray-300 list-disc pl-5">
+          <li>Java, Kotlin</li>
+          <li>Android Studio, XML</li>
+          <li>SQLite, Firebase</li>
+          <li>Material Design, UI/UX</li>
+          <li>RESTful APIs (Retrofit, Volley)</li>
+          <li>JUnit, Agile/Scrum</li>
+        </ul>
+      </section>
+
+      <!-- Projects -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Notable Projects</h2>
+        <ul class="space-y-3 text-gray-300">
+          <li>
+            <strong class="text-white">Unit Converter</strong> - Published to Play Store. Built with Java, XML, and SQLite with custom keypad UI.
+          </li>
+          <li>
+            <strong class="text-white">Weight Loss Tracker</strong> - Health app with tracking dashboard and BMI features.
+          </li>
+          <li>
+            <strong class="text-white">Quiz App</strong> - Used by 500+ students. Included leaderboard and analytics using Retrofit APIs.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Education</h2>
+        <p class="text-gray-300">B.Tech. CSE (AI & ML), Lakshmi Narain College Of Technology & Science, Bhopal (2023 - 2026)</p>
+      </section>
+
+      <!-- CTA -->
+      <div class="text-center mt-12">
+        <a href="#contact" class="inline-block bg-red-500 hover:bg-red-600 px-6 py-3 rounded-full font-medium transition">
+          Let's Work Together
+        </a>
+        <p class="mt-4 text-gray-400 text-sm">📧 Email: skumarmmr225@gmail.com | 📞 Phone: 8275584475</p>
+      </div>
+    </div>
+  </main>
+</section>
+    <!-- Add this after your Portfolio and About sections -->
+<section id="contact" class="py-20 px-6 relative z-10">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white" data-aos="fade-up">Contact Me</h2>
+    <p class="text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="100">Feel free to reach out for collaborations, questions, or just a friendly hello!</p>
+    
+    <form action="https://formspree.io/f/mgvzepkg" method="POST" class="space-y-6" data-aos="fade-up" data-aos-delay="200">
+      <input type="text" name="name" placeholder="Your Name" required
+        class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-red-500"/>
+      <input type="email" name="email" placeholder="Your Email" required
+        class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-red-500"/>
+      <textarea name="message" rows="5" placeholder="Your Message" required
+        class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+      <button type="submit"
+        class="bg-red-500 px-6 py-3 w-full md:w-auto rounded-full hover:bg-red-600 transition duration-300 text-white">Send</button>
+    </form>
+  </div>
+</section>
+  </main>
+ <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.2/tsparticles.bundle.min.js"></script>
+
+  <script>
+    // AOS animations
+    AOS.init({ duration: 1000, once: true });
+
+    // Typed.js: Hero animation
+    new Typed("#type", {
+      strings: ["Android Developer", "UI Designer"],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: true,
+      showCursor: true,
+      cursorChar: "▉"
+    });
+
+    // Typed.js: About section
+    new Typed("#type2", {
+      strings: ["Android Developer", "UI Designer"],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: true,
+      showCursor: false
+    });
+
+    // Scroll progress bar
+    window.onscroll = function () {
+      let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrolled = (winScroll / height) * 100;
+      document.getElementById("scroll-bar").style.width = scrolled + "%";
+    };
+
+    // Mobile menu toggle
+    document.getElementById("menu-toggle")?.addEventListener("click", function () {
+      document.getElementById("mobile-menu")?.classList.toggle("hidden");
+    });
+
+    // Particle background
+    tsParticles.load("tsparticles", {
+      fullScreen: { enable: true, zIndex: -1 },
+      particles: {
+        number: { value: 60 },
+        size: { value: 3 },
+        move: { enable: true, speed: 1 },
+        opacity: { value: 0.5, random: { enable: true, minimumValue: 0.3 } },
+        shape: { type: "circle" },
+        links: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        }
+      },
+      interactivity: {
+        events: {
+          onHover: { enable: true, mode: "grab" },
+          onClick: { enable: true, mode: "push" }
+        },
+        modes: {
+          grab: { distance: 200, links: { opacity: 1 } },
+          push: { quantity: 4 }
+        }
+      },
+      detectRetina: true,
+      background: { color: "#0d1128" }
+    });
+
+const toggleButton = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+let isOpen = false;
+
+toggleButton.addEventListener("click", () => {
+  isOpen = !isOpen;
+
+  if (isOpen) {
+    mobileMenu.classList.remove("hidden");
+    setTimeout(() => {
+      mobileMenu.classList.add("menu-open");
+      mobileMenu.classList.remove("menu-close");
+    }, 10);
+  } else {
+    mobileMenu.classList.remove("menu-open");
+    mobileMenu.classList.add("menu-close");
+
+    setTimeout(() => {
+      mobileMenu.classList.add("hidden");
+    }, 300); // Match transition duration
+  }
+});
+
+
+  
+  </script>
+
+
+</body>
+</html>
